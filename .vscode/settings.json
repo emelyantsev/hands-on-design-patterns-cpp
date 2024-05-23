@@ -51,6 +51,20 @@
         "typeinfo": "cpp",
         "optional": "cpp",
         "ranges": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "any": "cpp",
+        "chrono": "cpp",
+        "condition_variable": "cpp",
+        "coroutine": "cpp",
+        "ratio": "cpp",
+        "iomanip": "cpp",
+        "mutex": "cpp",
+        "semaphore": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp",
+        "variant": "cpp"
     }
 }

@@ -83,10 +83,6 @@ co_resource<std::mutex> make_guard(std::mutex& m, bool log) {
 int main(int argc, char** argv) {
   try {
     co_resource<std::mutex> lg { make_guard(m, true) };
-<<<<<<< HEAD
-=======
-    
->>>>>>> 25786e4 (finish chapter 6)
     if (argc > 1) throw 0;
     std::cout << "Work" << std::endl;
   } catch (...) {}
