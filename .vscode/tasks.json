@@ -30,7 +30,7 @@
         "command": "/usr/bin/g++",
         "args": [
             "-fdiagnostics-color=always",
-            "-g",
+            "-O3",
             "*.cpp",
             "-o",
             "${fileDirnameBasename}",
