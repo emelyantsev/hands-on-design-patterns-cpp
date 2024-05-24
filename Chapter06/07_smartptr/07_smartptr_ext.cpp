@@ -23,3 +23,19 @@ smartptr<int, deleter> get_smartptr() {
 smartptr_te<int> get_smartptr_te() {
     return smartptr_te<int>(new int(0), d);
 }
+
+smartptr_te_lb<int> get_smartptr_te_lb() {
+    return smartptr_te_lb<int>(new int(0), d);
+}
+
+smartptr_te_lb0<int> get_smartptr_te_lb0() {
+    return smartptr_te_lb0<int>(new int(0), d);
+}
+
+smartptr_te_static<int> get_smartptr_te_static() {
+    return smartptr_te_static<int>(new int(0), d);
+}
+
+smartptr_te_vtable<int> get_smartptr_te_vtable() {
+    return smartptr_te_vtable<int>(new int(0), d);
+}
