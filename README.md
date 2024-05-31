@@ -7,3 +7,4 @@
 5. [A Comprehensive Look at RAII](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter05)
 6. [Understanding Type Erasure](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter06)
 7. [SFINAE, Concepts, and Overload Resolution Management](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter07)
+8. [The Curiously Recurring Template Pattern](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter08)
