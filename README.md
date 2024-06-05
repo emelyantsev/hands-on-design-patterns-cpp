@@ -8,3 +8,4 @@
 6. [Understanding Type Erasure](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter06)
 7. [SFINAE, Concepts, and Overload Resolution Management](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter07)
 8. [The Curiously Recurring Template Pattern](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter08)
+9. [Named Arguments, Method Chaining, and the Builder Pattern](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter09)
