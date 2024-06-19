@@ -10,3 +10,4 @@
 8. [The Curiously Recurring Template Pattern](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter08)
 9. [Named Arguments, Method Chaining, and the Builder Pattern](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter09)
 10. [Local Buffer Optimization](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter10)
+11. [ScopeGuard](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter11)
