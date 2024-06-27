@@ -13,3 +13,4 @@
 11. [ScopeGuard](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter11)
 12. [Friend Factory](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter12)
 13. [Virtual Constructors and Factories](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter13)
+14. [The Template Method Pattern and the Non-Virtual Idiom](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter14)
