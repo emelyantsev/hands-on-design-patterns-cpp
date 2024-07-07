@@ -1,4 +1,5 @@
-// Version 02 with template template deletion policy.
+// Version 10 with release policy
+
 #include <cstdlib>
 #include <utility>
 #include <cassert>
@@ -43,46 +44,64 @@ class SmallHeap {
     SmallHeap(const SmallHeap&) = delete;
     SmallHeap& operator=(const SmallHeap&) = delete;
 };
+
 void* operator new(size_t s, SmallHeap* h) { return h->allocate(s); }
 
-template <typename T, typename Heap = SmallHeap>
-struct DeleteHeap {
-    explicit DeleteHeap(Heap& heap)
+template <typename T>
+struct DeleteSmallHeap {
+    explicit DeleteSmallHeap(SmallHeap& heap)
         : heap_(heap) {}
     void operator()(T* p) const {
         p->~T();
         heap_.deallocate(p);
     }
     private:
-    Heap& heap_;
+    SmallHeap& heap_;
 };
 
-template <typename T, template <typename...> class DeletionPolicy = DeleteByOperator>
-class SmartPtr {
+template <typename P> struct WithRelease {
+    void release() { static_cast<P*>(this)->p_ = nullptr; }
+};
+
+template <typename P> struct NoRelease {
+};
+
+template <typename T, typename DeletionPolicy = DeleteByOperator<T>, template <typename...> class ReleasePolicy = WithRelease>
+class SmartPtr : private DeletionPolicy, public ReleasePolicy<SmartPtr<T, DeletionPolicy, ReleasePolicy>>
+{
     T* p_;
-    DeletionPolicy<T> deletion_policy_;
+    friend class ReleasePolicy<SmartPtr>;
+
     public:
     explicit SmartPtr(T* p = nullptr,
-                      const DeletionPolicy<T>& deletion_policy = DeletionPolicy<T>())
-        : p_(p), deletion_policy_(deletion_policy)
+                      DeletionPolicy&& deletion_policy = DeletionPolicy())
+        : DeletionPolicy(std::move(deletion_policy)), p_(p)
     {}
+
     ~SmartPtr() { 
-        deletion_policy_(p_);
+        if (p_) DeletionPolicy::operator()(p_);
     }
+
     T* operator->() { return p_; }
     const T* operator->() const { return p_; }
     T& operator*() { return *p_; }
     const T& operator*() const { return *p_; }
+
     SmartPtr(const SmartPtr&) = delete;
+
     SmartPtr& operator=(const SmartPtr&) = delete;
+
     SmartPtr(SmartPtr&& that) :
-        p_(std::exchange(that.p_, nullptr)),
-        deletion_policy_(std::move(that.deletion_policy_))
+        DeletionPolicy(std::move(that)),
+        ReleasePolicy<SmartPtr>(std::move(that)),
+        p_(std::exchange(that.p_, nullptr))
     {}
+
     SmartPtr& operator=(SmartPtr&& that) {
-        deletion_policy_(p_);
+        DeletionPolicy::operator()(p_);
         p_ = std::exchange(that.p_, nullptr);
-        deletion_policy_ = std::move(deletion_policy_.that);
+        static_cast<DeletionPolicy&>(*this) = std::move(that);
+        static_cast<ReleasePolicy<SmartPtr>&>(*this) = std::move(that);
         return *this;
     }
 };
@@ -95,26 +114,30 @@ class C {
     int get() const { return i_; }
 };
 
-using delete_C_t = void (*)(C*);
-void delete_C(C* p) { delete p; }
-
 int main() {
 
     {
-        SmartPtr<C> c(new C(42));
+        SmartPtr<C> c( new C(42) );
         std::cout << "C: " << c->get() << " @ " << &*c << std::endl;
-        std::cout << sizeof(c) << std::endl;
+        C* p = &*c;
+        c.release();            // No automatic deletion
+        delete p;               // Manual deletion
+        
     }
 
     {
         SmallHeap h;
-#if __cplusplus >= 201703L // C++17
-        SmartPtr c{ new( &h ) C(42), DeleteHeap<C>( h ) };
-#else
-        SmartPtr<C, DeleteSmallHeap> c{new(&h) C(42), DeleteSmallHeap<C>(h)};
-#endif
+        SmartPtr<C, DeleteSmallHeap<C>, NoRelease> c{ new( &h ) C(42), DeleteSmallHeap<C>(h) };
         std::cout << "C: " << c->get() << " @ " << &*c << std::endl;
-        std::cout << sizeof(c) << std::endl;
+
+        
+
+        //c.release();    // Does not compile
+    }
+    
+    {
+        SmartPtr<C> c(new C(42));
+        SmartPtr<C> c1(std::move(c));
     }
 
 }
