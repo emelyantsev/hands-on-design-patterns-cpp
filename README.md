@@ -20,5 +20,4 @@
 
 ## List of patterns 
 
-
 - [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
