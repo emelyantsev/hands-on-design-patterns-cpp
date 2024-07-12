@@ -15,3 +15,10 @@
 13. [Virtual Constructors and Factories](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter13)
 14. [The Template Method Pattern and the Non-Virtual Idiom](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter14)
 15. [Policy-based design](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter15)
+16. [Adapters and Decorators](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter16)
+
+
+## List of patterns 
+
+
+- [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
