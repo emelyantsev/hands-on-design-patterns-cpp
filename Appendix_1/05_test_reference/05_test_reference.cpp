@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <string>
+#include <utility>
 
 template<typename T>
 class Holder {
@@ -15,6 +16,14 @@ class Holder {
 
         T val;
 };
+
+void func(std::string&& str) {
+
+    std::string temp( std::move(str) ) ;
+
+    std::cout << temp << std::endl;
+    std::cout << str << std::endl;
+}
 
 
 int main() {
@@ -33,5 +42,14 @@ int main() {
     Holder<int>& rh1 = h1;
 
     Holder<int>&& rh2 = Holder(10);
+
+
+    std::string str1 = "Hello!" ;
+
+    // std::string&& ref1 = str1;
+
+    // func( str1 ) ;
+
+    func( std::move(str1) ) ;
 
 }
