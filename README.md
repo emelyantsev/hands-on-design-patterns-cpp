@@ -19,7 +19,10 @@
 
 
 ## Usefull patterns 
-[link](https://github.com/RefactoringGuru/design-patterns-cpp) 
 
 - [x] [Adapter](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Adapter)
 - [x] [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
+
+## Links
+
+- [https://github.com/RefactoringGuru/design-patterns-cpp](https://github.com/RefactoringGuru/design-patterns-cpp) 
