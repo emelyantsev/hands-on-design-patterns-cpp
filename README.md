@@ -18,6 +18,6 @@
 16. [Adapters and Decorators](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter16)
 
 
-## List of patterns 
+## [List of patterns](https://github.com/RefactoringGuru/design-patterns-cpp) 
 
 - [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
