@@ -18,7 +18,8 @@
 16. [Adapters and Decorators](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter16)
 
 
-## Usefull patterns [link](https://github.com/RefactoringGuru/design-patterns-cpp) 
+## Usefull patterns 
+[link](https://github.com/RefactoringGuru/design-patterns-cpp) 
 
-- [Adapter](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Adapter)
-- [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
+- [x] [Adapter](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Adapter)
+- [x] [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
