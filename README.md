@@ -16,9 +16,9 @@
 14. [The Template Method Pattern and the Non-Virtual Idiom](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter14)
 15. [Policy-based design](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter15)
 16. [Adapters and Decorators](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter16)
+17. [The Visitor Pattern and Multiple Dispatch](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter17)
 
-
-## Usefull patterns 
+## Useful patterns 
 
 - [x] [Adapter](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Adapter)
 - [x] [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
