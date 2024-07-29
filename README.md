@@ -24,6 +24,7 @@
 - [x] [Decorator](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Decorator)
 - [x] [Strategy](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Strategy)
 - [x] [Template method](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/TemplateMethod)
+- [x] [Visitor](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Appendix_2/Visitor)
 
 ## Links
 
