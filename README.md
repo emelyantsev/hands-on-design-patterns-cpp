@@ -17,6 +17,7 @@
 15. [Policy-based design](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter15)
 16. [Adapters and Decorators](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter16)
 17. [The Visitor Pattern and Multiple Dispatch](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter17)
+18. [Patterns for Concurrency](https://github.com/emelyantsev/hands-on-design-patterns-cpp/tree/main/Chapter18)
 
 ## Useful patterns 
 
