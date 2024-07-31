@@ -66,6 +66,7 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "variant": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "latch": "cpp"
     }
 }
